@@ -1,4 +1,4 @@
-# Getting Started with The N2 Starter Skin 
+# N2 Starter Skin Overview
 The purpose of this skin is to allow for easy, responsive theme development on the N2 eCommerce platform.
 
 ## Editing Styles
@@ -6,3 +6,6 @@ All of the your project styles should be added to the appropriate SASS file in t
 
 ## Editing Templates/HTML
 All of the available template edits can be found in the "inc" folder. If you cannot make the edits you need you will need to use javascript to edit the DOM on page load and/or put in a request with Dave to enable the functionality needed.
+
+# Getting Started
+To use this skin, rename the folder to your desired name (typically the client's name) and move the renamed folder to "/assets/design/" on the server. Once complete, you will then be able to select the skin in the client's N2 portal.
