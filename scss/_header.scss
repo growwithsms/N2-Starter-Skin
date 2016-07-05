@@ -1,0 +1,183 @@
+/*
+==========================================================================
+    Header
+==========================================================================
+*/
+
+#intro,
+#innerContainer {
+    @extend .page-wrap;
+}
+
+
+/* ----------- Logo Area ----------- */
+#pageHeader {
+    h2 { 
+        margin: 0;
+        padding: 0;
+        // Don't display none the H2 for accessability reasons
+    }
+    a {
+        display: block;
+        width: 100%;
+        background: url('img/logo.png');
+        height: 70px;
+        width: 208px;
+        text-indent: -99999px; // this will hide the h2 but still enable screen readers to know the link text
+        overflow: hidden;
+    }
+}
+@media (max-width: 960px) {
+    #pageHeader a {
+        margin-left: 2em;
+    }
+}
+/* ----------- Login / Cart Links ----------- */
+#tinycartstatus {
+    padding: 0.55em;
+}
+#login,
+#tinycart,
+#tinycartstatus {
+    display: inline-block;
+}
+#link-cart:before {
+    content: "\f07a";
+    font-family: fontAwesome;
+    padding-right: 5px;
+}
+#link-checkout:before {
+    content: "\f283";
+    font-family: fontAwesome;
+    padding-right: 5px;
+}
+#link-login:before {
+    content: "\f023";
+    font-family: fontAwesome;
+    padding-right: 1px;
+}
+#link-support:before {
+    content: "\f007";
+    font-family: fontAwesome;
+    padding-right: 5px;
+}
+#link-newaccount:before {
+    content: "\f234";
+    font-family: fontAwesome;
+    padding-right: 5px;
+}
+
+
+/* ----------- Search - CTA Area */
+#search {
+    position: relative;
+    #searchkeyword {
+        z-index: 1 !important;
+        width: 70%;
+        float: left;
+    }
+    #searchsubmit {
+        float: left;
+        width: 30%;
+        margin-top: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        &:hover,
+        &:active,
+        &:focus {
+
+        }
+    }
+}
+
+
+/* ----------- Main Navigation */
+#navigation {
+    a {
+        padding: 1em 0.75em 0.7em;
+        display: block;
+        position: relative;
+        &:hover {
+
+        }
+    }
+    > ul > li {
+        display: inline-block;
+        position: relative;
+    }
+    > ul ul {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        min-width: 200px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+        z-index: 1;
+    }
+    > ul ul a {
+        padding: 5px 1em;
+    }
+}
+
+
+/* -------- Mobile Navigation --------- */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    font-size: 2em;
+    color: #000;
+    padding: 0 0.3em;
+    z-index: 10;
+    left: 0px;
+    top: 0.5em;
+    cursor: pointer;
+}
+
+.menu-toggle:hover,
+.menu-toggle:active,
+.menu-toggle:focus {
+    color: #555;
+}
+
+@media (max-width: 960px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    /* -------- off canvas menu */
+    #navigation > ul {
+        position: fixed;
+        z-index: 99999999;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        min-width: 200px;
+        max-width: 300px;
+        background: #fff;
+        padding: 1em;
+        font-size: 1.15em;
+        box-shadow: 1px 6px 8px rgba(0, 0, 0, 0);
+        transform: translate3d(-300px, 0, 0);
+        transition: all 250ms ease;
+        text-align: left;
+    }
+    .show-menu #navigation > ul {
+        transform: translate3d(0, 0, 0);
+        box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.24);
+    }
+    #navigation {
+        > ul a {
+            color: #222;
+            padding: 0.75em;
+            text-decoration: none;
+            border-bottom: 1px solid #eee;
+            &:hover {
+                background: #eee;
+            }
+        }
+        /* Second level menu */
+        > ul > li {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+
+.tips {
+    background: #eee;
+    padding: 0.1em 1em 1em 1em;
+    margin-bottom: 1em;
+    font-size: 0.75em;
+    dt {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+    }
+    dd {
+        margin-bottom: 1em;
+    }
+}
+
+.sidebar {
+    width: 50%;
+    float: right;
+    padding: 0 0 1em 1em;
+}
+
+.mainbar {
+    width: 50%;
+    float: left;
+    ul {
+        list-style: inherit;
+        margin-left: 2em;
+        margin-top: 0.5em;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        width: 100%;
+        float: none;
+        padding: 0;
+    }
+    .mainbar {
+        width: 100%;
+        float: none;
+    }
+}
+
+.loginpage {
+    @extend .clearfix;
+}
+
+.login {
+    padding: 1em;
+    border: 1px solid #bbb;
+    margin-bottom: 1em;
+}
+
+.login input {
+    display: block;
+    width: 100%;
+}
+
+.login a {
+    font-size: 0.75em;
+    font-style: italic;
+    opacity: 0.8;
+}
+

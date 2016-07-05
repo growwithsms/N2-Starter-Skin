@@ -1,0 +1,87 @@
+
+
+/* -------------- Cart page ----------- */
+
+#cart_tools {
+    margin-top: 1em;
+}
+
+#cart a {
+    color: #000 !important;
+}
+
+
+/* -------------- Checkout page ----------- */
+
+#checkoutSteps {
+    @extend .clearfix;
+}
+
+#checkoutSteps a {
+    display: block;
+    width: 25%;
+    float: left;
+    text-align: center;
+    background: #fff;
+    padding: 0.5em 0.25em;
+    font-size: 0.875em;
+}
+
+#checkoutSteps a:hover,
+#checkoutSteps a.step1on,
+#checkoutSteps a.step2on,
+#checkoutSteps a.step3on,
+#checkoutSteps a.step4on {
+    text-decoration: none;
+    background: $primary-color;
+    color: #fff;
+}
+
+#checkoutSteps em,
+.accountHeader {
+    font-weight: 700;
+}
+
+@media (max-width:767px) {
+    .checkout1 tr {
+        display: block;
+        width: 100%;
+    }
+    .checkout1 th {
+        display: block;
+        width: 100%;
+        white-space: normal;
+        text-align: left;
+    }
+    .checkout1 td {
+        display: block;
+        width: 100% !important;
+    }
+    .checkout1 form {
+        padding: 5px !important;
+    }
+    .checkout1 input {
+        width: 95% !important;
+        margin: 0 !important;
+    }
+    #checkoutSteps a {
+        width: 50%;
+        font-size: 0.75em;
+    }
+}
+
+.page-step3 input,
+.page-step3 select {
+    width: auto!important;
+}
+
+table#smallcart {
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 1024px) {
+    .checkout3 td {
+        display: block;
+    }
+}

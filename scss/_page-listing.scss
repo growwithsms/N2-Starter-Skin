@@ -1,0 +1,301 @@
+/*
+==========================================================================
+    Product Listing / Category Listing Pages
+==========================================================================
+*/
+
+#breadcrumbs {
+    font-size: 0.666em;
+    opacity: 0.8;
+    margin-top: 0;
+    margin-bottom: 0px !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+}
+
+.navigation {
+    font-size: 0.875em;
+    opacity: 0.8;
+    margin: 0em 1em;
+    br {
+        display: none;
+    }
+}
+
+.recordcount {
+    font-size: 0.875em;
+    opacity: 0.5;
+}
+
+.itemsperpage {
+    font-size: 0.875em;
+    opacity: 0.5;
+    margin: auto;
+    text-align: center;
+}
+
+.mostpopular {
+    padding: 0.5em 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    a {
+        border: 5px solid #fff;
+    }
+}
+#productFlag {
+    background: #fff;
+    font-size: 0.875em;
+    margin-top: 3em;
+}
+
+#product h3 {
+    padding-left: 2.5em;
+    text-align: left;
+    padding-right: 0.5em;
+}
+.productlist_product {
+    display: block;
+    margin: auto;
+}
+.productlist_logo {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    background: #fff;
+    max-width: 1.5em;
+}
+.productlist_desc {
+    text-align: left;
+    display: block;
+    font-size: 0.875em;
+    margin-bottom: 0.5em;
+}
+
+
+/* Grids */
+#category > ul,
+#product > ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+#category > ul > li,
+#product > ul > li {
+    float: left;
+    width: 23.333%;
+    text-align: center;
+    background: #f4f4f4;
+    margin: 0.5em 2% 1% 0;
+    position: relative;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #category > ul > li,
+    #product > ul > li {
+        width: 31.33%;
+        margin-bottom: 2%;
+        margin-right: 3%;
+    }
+    #category > ul > li:nth-child(3n),
+    #product > ul > li:nth-child(3n) {
+        margin-right: 0;
+    }
+    #category > ul > li:nth-child(3n+1),
+    #product > ul > li:nth-child(3n+1) {
+        clear: both;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 401px) {
+    #category > ul > li,
+    #product > ul > li {
+        width: 48.5%;
+        margin-bottom: 3%;
+        margin-right: 3%;
+    }
+    #category > ul > li:nth-child(2n),
+    #product > ul > li:nth-child(2n) {
+        margin-right: 0;
+    }
+    #category > ul > li:nth-child(2n+1),
+    #product > ul > li:nth-child(2n+1) {
+        clear: both;
+    }
+}
+
+@media (max-width: 400px) {
+    #category > ul > li,
+    #product > ul > li {
+        width: 100%;
+        margin-bottom: 4%;
+        margin-right: 0;
+        float: none;
+    }
+}
+
+#product>ul>li:hover,
+#product>ul>li:focus,
+#category>ul>li:focus,
+#category>ul>li:hover {
+    background-color: #fff;
+}
+
+#category h3,
+#product h3 {
+    height: auto !important;
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+
+#category li > a,
+#product li > a {
+    min-height: 5em;
+    display: block;
+    width: 100%;
+}
+
+#category a:hover,
+#product a:hover {
+    text-decoration: none;
+}
+
+
+
+/* Style the Hover Box... a pity we need this to use these crazy selectors... */
+body>div:last-child>div:nth-child(3) {
+    width: auto !important;
+    background: #fff !important;
+    border-color: #fff !important;
+    padding: 0.5em 1em !important;
+    box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.15);
+}
+.boxoverzoom {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 0em;
+    background: white;
+    img {
+        border: 0 none !important;
+        display: block;
+        margin: auto;
+    }
+}
+
+/* Search Pages */
+#waitBox {
+    position: fixed;
+    z-index: 9999999999999999;
+    top: 0;
+    left: 0;
+    background: $primary-color;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 200ms ease;
+    transform: translate(0px, 0%);
+    text-align: center;
+    padding: 2em;
+}
+#waitBox.hide {
+    display: flex;
+    transform: translate(0px, -100%);
+}
+#waitAnim:before {
+    content: "\f110";
+    font-family: fontAwesome;
+    display: block;
+    font-size: 3em;
+}
+#waitAnim {
+    margin-right: 1em;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: none !important;
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.page-search_quick h1 {
+    clear: both;
+}
+
+.page-search_quick #product {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.page-search_quick #product > ul {
+    float: left;
+    text-align: center;
+    background: #fff;
+    margin: 1em 2% 1% 0;
+    position: relative;
+    display: block;
+    clear: none;
+}
+
+.page-search_quick #product > ul > li {
+    width: 100% !important;
+    float: none;
+    display: block;
+    padding: 0;
+    margin: 0 !important;
+    box-shadow: 0 0 0;
+    clear: initial !important;
+}
+
+@media (min-width: 768px) {
+    .page-search_quick #product > ul {
+        width: 31.33%;
+        margin-bottom: 2%;
+        margin-right: 3%;
+    }
+    .page-search_quick #product > ul:nth-child(3n) {
+        margin-right: 0;
+    }
+    .page-search_quick #product > ul:nth-child(3n+1) {
+        clear: both;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 400px) {
+    .page-search_quick #product > ul {
+        width: 48.5%;
+        margin-bottom: 3%;
+        margin-right: 3%;
+    }
+    .page-search_quick #product > ul:nth-child(2n) {
+        margin-right: 0;
+    }
+    .page-search_quick #product > ul:nth-child(2n+1) {
+        clear: both;
+    }
+}
+
+@media (max-width: 399px) {
+    .page-search_quick #product > ul {
+        width: 100%;
+        margin-bottom: 4%;
+        margin-right: 0;
+        float: none;
+    }
+}
+
+.page-search_quick img.productlist_logo {
+    left: 0;
+}

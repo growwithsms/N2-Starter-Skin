@@ -1,0 +1,87 @@
+/*
+==========================================================================
+    The Main SASS File - Pulling it all together baby!
+==========================================================================
+*/
+
+// Reset and make all browsers consistent
+@import "normalize";
+
+// The base styles that everything rides on
+@import "base";
+
+// Structure / Framework of the website - 12 column grid and page max width.
+@import "structure";
+
+// The Colors and Fonts used throughout our project
+@import "variables";
+
+// Typography - header sizes, line heights, etc.
+@import "typography";
+
+// Iconigraphy
+@import "font-awesome";
+
+// Form styles - inputs, textareas, select, etc.
+@import "forms";
+
+// Button styles - submit inputs, links, and button buttons
+@import "buttons";
+
+// The Header and everything inside of it including navigation
+@import "header";
+
+// The Body - generic elements. for page specific elements go to page-name.scss files
+@import "body";
+
+// The Footer and everything inside of it
+@import "footer";
+
+/////// Custom Pages
+
+// Product and Category Listing Pages
+@import "page-listing";
+
+// Product Pages
+@import "page-product";
+
+// Login Page
+@import "page-login";
+
+// Account Pages
+@import "page-account";
+
+// Shopping Cart and Checkout Pages
+@import "page-cart";
+
+
+/* ==========================================================================
+   Hide all the things                                                    
+   ========================================================================== */
+form#searchMainBox,
+body > br,
+#myCartForm > br,
+#bottomClear,
+#extra,
+#productFlag br,
+#productFlag .clear,
+.mostpopular br,
+#mainbox > br,
+a.fade,
+span.navigation #navigation {
+    display: none !important;
+}
+
+// Hacks to get around jQuery UI z-index issues
+#container {
+    position: relative;
+    z-index: 39999;
+}
+
+body > div:last-child {
+    z-index: 40000 !important;
+}
+
+.ui-helper-hidden-accessible {
+    bottom: 0;
+}
