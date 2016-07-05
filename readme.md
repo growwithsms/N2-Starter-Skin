@@ -7,7 +7,7 @@ The purpose of this skin is to allow for easy, responsive theme development on t
 + FontAwesome icons built-in
 + Built with SASS for faster development times
 
-[View Live Preview]
+[View Live Preview](http://issc.testn2.com/store/index.cfm)
 
 # Getting Started Guide
 
