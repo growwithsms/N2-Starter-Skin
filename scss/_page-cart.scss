@@ -85,3 +85,20 @@ table#smallcart {
         display: block;
     }
 }
+
+.checkout1 form {
+    background: none !important;
+    text-align: left !important;
+}
+.checkout1 form a {
+    font-size: 0.875em;
+}
+.checkout1 form input {
+    width: 100% !important;
+}
+.checkout1 form input[type="submit"] {
+    margin-top: 1em;
+}
+.checkout1 form br {
+    display: none;
+}

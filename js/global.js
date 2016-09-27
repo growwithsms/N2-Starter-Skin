@@ -2,9 +2,18 @@
 $(function() {
 
     ////////////////////////////////////////
-    //////// Adjust Logo in DOM
+    //////// DOM Adjustments - n2 hacks
     ////////////////////////////////////////
+    
     $('#pageHeader h2').appendTo('#pageHeader a');
+    // Move an element Down function
+    $.fn.moveDown = function() {
+        $.each(this, function() {
+            $(this).before($(this).next());
+        });
+    };
+    // Moves the Category name below picture in DOM
+    $('#category > ul > li > h3').moveDown();
 
     ////////////////////////////////////////
     //////// Mobile Menu
@@ -26,21 +35,13 @@ $(function() {
     });
 
     ////////////////////////////////////////
-    //////// Product Pages
+    //////// Responsive Tables
     ////////////////////////////////////////
 
     // Add wrapper to product table so we can enable scrolling on mobile
     $('#prodDisplayBlock').wrap('<div class="prodDisplayBlock-wrapper" />');
+    $('table#cart').wrap('<div class="prodDisplayBlock-wrapper" />');
 
-    // Move an element Down function
-    $.fn.moveDown = function() {
-        $.each(this, function() {
-            $(this).before($(this).next());
-        });
-    };
-
-    // Moves the Category name below picture in DOM
-    $('#category > ul > li > h3').moveDown();
 
 
     ////////////////////////////////////////
@@ -48,7 +49,7 @@ $(function() {
     ////////////////////////////////////////
 
     // Wraps all symbols in SUP tag for proper styling
-    $('body :not(script)').contents().filter(function() {
+    $('#mainbox :not(script)').contents().filter(function() {
         return this.nodeType === 3;
     }).replaceWith(function() {
         return this.nodeValue.replace(/[™®©]/g, '<sup>$&</sup>');

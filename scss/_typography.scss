@@ -14,10 +14,9 @@ p {
 
 a {
     color: #252525;
-    text-decoration: none;
     &:hover,
     &:focus {
-        text-decoration: underline;
+        color: lighten( #252525, 20% );
     }
 }
 

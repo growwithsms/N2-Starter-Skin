@@ -5,10 +5,7 @@
 */
 
 // Reset and make all browsers consistent
-@import "normalize";
-
-// The base styles that everything rides on
-@import "base";
+@import "minireset";
 
 // Structure / Framework of the website - 12 column grid and page max width.
 @import "structure";
