@@ -1,23 +1,27 @@
-/*
+/* 
 ==========================================================================
-    The Main SASS File - Pulling it all together baby!
+	Plugins
 ==========================================================================
 */
 
-// Reset and make all browsers consistent
-@import "minireset";
+@import "font-awesome";
+@import "stacktable";
 
-// Structure / Framework of the website - 12 column grid and page max width.
-@import "structure";
+
+/* 
+==========================================================================
+   The "Skin"
+==========================================================================
+*/
+
+// a responsive foundation
+@import "base";
 
 // The Colors and Fonts used throughout our project
 @import "variables";
 
 // Typography - header sizes, line heights, etc.
 @import "typography";
-
-// Iconigraphy
-@import "font-awesome";
 
 // Form styles - inputs, textareas, select, etc.
 @import "forms";
@@ -28,13 +32,19 @@
 // The Header and everything inside of it including navigation
 @import "header";
 
-// The Body - generic elements. for page specific elements go to page-name.scss files
+// The Body's generic elements. for page specific elements go to page-name.scss files
 @import "body";
 
 // The Footer and everything inside of it
 @import "footer";
 
-/////// Custom Pages
+
+
+/* 
+==========================================================================
+   Custom Pages - except for home...
+==========================================================================
+*/
 
 // Product and Category Listing Pages
 @import "page-listing";
@@ -52,9 +62,10 @@
 @import "page-cart";
 
 
-/* ==========================================================================
-   Hide all the things                                                    
-   ========================================================================== */
+/* 
+==========================================================================
+   Hide all the things that shouldn't of been there in the first place...
+========================================================================== */
 form#searchMainBox,
 body > br,
 #myCartForm > br,
@@ -74,11 +85,9 @@ span.navigation #navigation {
     position: relative;
     z-index: 39999;
 }
-
 body > div:last-child {
     z-index: 40000 !important;
 }
-
 .ui-helper-hidden-accessible {
     bottom: 0;
 }

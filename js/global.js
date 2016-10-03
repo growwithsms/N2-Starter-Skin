@@ -1,51 +1,74 @@
-// on document ready do all the things
-$(function() {
+////////////////////////////////////////////////////////////////////////////////
+//////////////// Plugins - prepros will concatenate them into global.min.js
+////////////////////////////////////////////////////////////////////////////////
+//@prepros-prepend jquery.fitvids.js
+//@prepros-prepend jquery.stacktable.js
+
+
+////////////////////////////////////////////////////////////////////////////////
+//////////////// Custom scripts below...
+////////////////////////////////////////////////////////////////////////////////
+
+$(function() { // on document ready do all the things
 
     ////////////////////////////////////////
     //////// DOM Adjustments - n2 hacks
     ////////////////////////////////////////
-    
     $('#pageHeader h2').appendTo('#pageHeader a');
+
     // Move an element Down function
     $.fn.moveDown = function() {
         $.each(this, function() {
             $(this).before($(this).next());
         });
     };
+
     // Moves the Category name below picture in DOM
     $('#category > ul > li > h3').moveDown();
 
+    
     ////////////////////////////////////////
     //////// Mobile Menu
     ////////////////////////////////////////
     
     // Add hamburger menu
-    $('#navigation').append('<div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>')
-    
+    $('#navigation').append('<button class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></button>')
+
+    // Moves login and cart links to mobile menu
+    checkSize();
+    $(window).resize(checkSize);
+    function checkSize(){
+        if ($(".menu-toggle").css("display") == "block" ){
+            // Move all the things to off-canvas mobile menu
+            $('#intro #login').appendTo('#navigation > ul');
+            $('#intro #tinycart').appendTo('#navigation > ul');
+            $('#intro #search').prependTo('#navigation > ul');
+        } else {
+            // Move all the things back on resize 
+            $('#intro #login').appendTo('#intro');
+            $('#intro #tinycart').appendTo('#intro');
+            $('#intro #search').appendTo('#intro');
+        }
+    }
+
     // Toggle Menu
-    $('.menu-toggle').on('click', function(e) {
-        e.stopPropagation();
+    $('.menu-toggle').on('click', function() {
         $('body').toggleClass('show-menu');
-        return false;
     });
 
-    // Hide menu if click is outside of menu
-    $(document).on('click', function(e) {
-        $('body').removeClass('show-menu');
-    });
 
     ////////////////////////////////////////
-    //////// Responsive Tables
+    //////// Responsive Tables and Embeds
     ////////////////////////////////////////
 
-    // Add wrapper to product table so we can enable scrolling on mobile
-    $('#prodDisplayBlock').wrap('<div class="prodDisplayBlock-wrapper" />');
-    $('table#cart').wrap('<div class="prodDisplayBlock-wrapper" />');
+    $('table#prodDisplayBlock').stacktable();
+    $('table#cart').stacktable();
 
+    $("#mainbox").fitVids();
 
 
     ////////////////////////////////////////
-    //////// General Improvements
+    //////// Other General Improvements
     ////////////////////////////////////////
 
     // Wraps all symbols in SUP tag for proper styling
@@ -69,5 +92,5 @@ $(function() {
         }
     });
 
-// end document ready
-});
+
+}); // end document ready

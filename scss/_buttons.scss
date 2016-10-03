@@ -11,7 +11,7 @@ button,
     color: #000;
     cursor: pointer;
     display: inline-block;
-    font-weight: bold;
+    font: bold 100%/1.4 $font-stack;
     float: none;
     margin-bottom: 1em;
     padding: .65em 1em;

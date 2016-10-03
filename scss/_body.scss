@@ -30,19 +30,19 @@
         &:hover {
         }
     }
-    li a {
-        color: #555;
-        display: block;
-        padding: 0.4em 1em;
-        position: relative;
-        transition: all 200ms ease;
-        border-bottom: 1px solid #eee;
-        &:hover {
-            background: #fafafa;
+    li {
+        list-style: none;
+        a {
+            color: #555;
+            display: block;
+            padding: 0.4em 1em;
+            position: relative;
+            transition: all 200ms ease;
+            border-bottom: 1px solid #eee;
             text-decoration: none;
-        }
-        &:focus {
-            text-decoration: none;
+            &:hover {
+                background: #fafafa;
+            }
         }
     }
     #quickorder {
