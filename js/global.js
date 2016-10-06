@@ -42,12 +42,10 @@ $(function() { // on document ready do all the things
             // Move all the things to off-canvas mobile menu
             $('#intro #login').appendTo('#navigation > ul');
             $('#intro #tinycart').appendTo('#navigation > ul');
-            $('#intro #search').prependTo('#navigation > ul');
         } else {
             // Move all the things back on resize 
             $('#intro #login').appendTo('#intro');
             $('#intro #tinycart').appendTo('#intro');
-            $('#intro #search').appendTo('#intro');
         }
     }
 

@@ -21,32 +21,38 @@ h1.productName {
     margin: auto;
 }
 
-#msg-confirm {
-    margin-top: 1em;
-    text-align: center;
-    margin-bottom: 1em;
+#msg-confirm,
+#msg-error {
+    display: block;
+    margin: 1em 0;
+    position: relative;
+    border-left: 1px solid;
+    border-radius: 4px;
+    padding: 1em;
 }
-
-#msg-confirm:before {
-    content: "\f046";
-    display: inline-block;
-    font-family: fontAwesome;
-    color: $primary-color;
+#msg-confirm {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
 }
 #msg-error {
-    text-align: center;
-    margin-top: 1em;
-    color: white;
-    background: red;
-    display: block;
-    border-radius: 7px;
-    position: relative;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+#msg-confirm:before,
+#msg-error:before {
+    display: inline-block;
+    font-family: 'FontAwesome';
+}
+#msg-confirm:before {
+    content: "\f046";
 }
 #msg-error:before {
     content: "\f071";
-    display: inline-block;
-    font-family: fontAwesome;
 }
+
 #thumbBox {
     font-size: 0.8em;
     font-style: italic;
