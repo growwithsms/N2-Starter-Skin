@@ -3,15 +3,13 @@
     Header
 ==========================================================================
 */
-#intro a {
-    text-decoration: none;
-}
-
-#intro,
-#innerContainer {
+#intro {
     @extend .page-wrap;
+    display: flex;
+    a {
+        text-decoration: none;
+    }
 }
-
 
 /* ----------- Logo Area ----------- */
 #pageHeader {
@@ -44,30 +42,28 @@
 #tinycartstatus {
     display: inline-block;
 }
-#link-cart:before {
-    content: "\f07a";
+#link-cart:before,
+#link-checkout:before,
+#link-login:before,
+#link-support:before,
+#link-newaccount:before {
     font-family: fontAwesome;
     padding-right: 5px;
+}
+#link-cart:before {
+    content: "\f07a";
 }
 #link-checkout:before {
     content: "\f283";
-    font-family: fontAwesome;
-    padding-right: 5px;
 }
 #link-login:before {
     content: "\f023";
-    font-family: fontAwesome;
-    padding-right: 1px;
 }
 #link-support:before {
     content: "\f007";
-    font-family: fontAwesome;
-    padding-right: 5px;
 }
 #link-newaccount:before {
     content: "\f234";
-    font-family: fontAwesome;
-    padding-right: 5px;
 }
 
 

@@ -33,7 +33,8 @@
 			AND	catIndent<#levelsToReturn#
 		ORDER BY catFullSort
 	</cfquery>
-	<cfoutput query="catInfo">
+	<ul class="catelog-navigation">
+		<cfoutput query="catInfo">
 				
 			<!--- Sets the correct link depending on if it's a product page, static page or category page --->
 			<cfif len(trim(catInfo.catURL))>

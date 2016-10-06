@@ -3,27 +3,31 @@
     Body - The stuff in between the header and footer!
 ==========================================================================
 */
-
-#mainbox {
-    background: #fff;
-    width: 75%;
-    float: right;
-    padding: 1em 1em 2em 1em;
-    position: relative; // N2 Hack
-    z-index: 10000000; // N2 Hack
+#innerContainer {
+    @extend .page-wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 #cobrandBanner {
-    float: right;
     width: 75%;
     text-align: center;
     background: #fff;
+    order: 1;
+}
+#mainbox {
+    background: #fff;
+    width: 75%;
+    position: relative; // N2 Hack
+    z-index: 10000000; // N2 Hack
+    order: 1;
 }
 
 /* ----------- Sidebar */
 #secondnav {
     width: 25%;
-    float: left;
     background: #999;
+    order: 2;
     #categoryNavHeaderLink {
         padding: 0.75em 1em;
         display: block;
@@ -46,7 +50,7 @@
         }
     }
     #quickorder {
-        padding: 1em;
+        padding: 1em 1em 0 1em;
         h3 {
             margin-bottom: 0.5em;
             margin-top: 0;
@@ -60,9 +64,7 @@
 }
 
 @media (max-width:767px) {
-    #secondnav {
-        display: none;
-    }
+    #secondnav,
     #mainbox {
         width: 100%;
     }
