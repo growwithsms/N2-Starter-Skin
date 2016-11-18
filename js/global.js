@@ -32,7 +32,7 @@ $(function() { // on document ready do all the things
     ////////////////////////////////////////
     
     // Add hamburger menu
-    $('#navigation').append('<button class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></button>')
+    $('#navigation').append('<button class="menu-toggle" aria-label="Main Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button>')
 
     // Moves login and cart links to mobile menu
     checkSize();
