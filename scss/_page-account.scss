@@ -1,14 +1,23 @@
+/*
+==========================================================================
+    Account Pages
+==========================================================================
+*/
+.page-new_account_form h1.page {
+    margin-top: 0;
+}
+
 .subnav {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     float: none;
-    border-radius: 5px;
-    border: 1px solid #bbb;
+    @extend .card;
     margin-bottom: 1em;
     margin-top: 1em;
     padding: 1em;
+    height: auto !important;
     a {
         color: #0e4837;
         font-size: 0.9em;
@@ -28,8 +37,7 @@
 .page-account_home #mainbox > table {
     margin-top: 1em;
     margin-bottom: 1em;
-    border: 1px solid #bbb;
-    border-radius: 5px;
+    @extend .card;
     padding: 1em;
 }
 

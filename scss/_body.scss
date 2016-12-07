@@ -5,33 +5,49 @@
 */
 #innerContainer {
     @extend .page-wrap;
-    display: flex;
-    flex-wrap: wrap;
+    margin: 2em auto;
 }
 
 #cobrandBanner {
     width: 75%;
+    float: right;
     text-align: center;
-    background: #fff;
     order: 1;
+    img {
+        margin-bottom: 1em;
+    }
 }
 #mainbox {
-    background: #fff;
     width: 75%;
+    float: right;
     position: relative; // N2 Hack
     z-index: 10000000; // N2 Hack
     order: 1;
+    padding-left: 2em;
 }
 
 /* ----------- Sidebar */
 #secondnav {
     width: 25%;
-    background: #999;
+    float: left;
     order: 2;
+    @extend .card;
+    h3 {
+        margin: 0;
+    }
     #categoryNavHeaderLink {
-        padding: 0.75em 1em;
+        padding: 0.75rem 1rem;
         display: block;
+        margin: 0;
+        text-decoration: none;
+        &:before {
+            content: "\f00a";
+            font-family: 'FontAwesome';
+            padding-right: 5px;
+            font-weight: 400;
+        }
         &:hover {
+            background: #eee;
         }
     }
     li {
@@ -45,9 +61,32 @@
             border-bottom: 1px solid #eee;
             text-decoration: none;
             &:hover {
-                background: #fafafa;
+                background: #eee;
             }
         }
+    }
+    .menu-item-depth-1 > a.has-children {
+        &:after {
+            content: "\f078";
+            font-family: fontAwesome;
+            float: right;
+            transform: rotate(0deg);
+            transition: all 300ms ease;
+        }
+    }
+    .active.menu-item-depth-1 > a.has-children {
+        &:after {
+            transform: rotate(-180deg);
+        }
+    }
+    .menu-item-depth-2 {
+        display: none;
+        a {
+            background-color: #f5f5f5 !important;
+        }
+    }
+    .active .menu-item-depth-2 {
+        display: block;
     }
     #quickorder {
         padding: 1em 1em 0 1em;
@@ -64,8 +103,21 @@
 }
 
 @media (max-width:767px) {
+    #innerContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
     #secondnav,
-    #mainbox {
+    #mainbox,
+    #cobrandBanner {
+        float: none;
         width: 100%;
+        padding-left: 0;
+    }
+    #secondnav {
+        order: 4;
+    }
+    #mainbox {
+        margin-bottom: 3em;
     }
 }

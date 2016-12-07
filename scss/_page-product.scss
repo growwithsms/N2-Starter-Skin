@@ -104,7 +104,6 @@ div#product li {
 
 .productBlock {
     width: auto !important;
-    background: #fff;
     margin-top: 0.5em!important;
 }
 
@@ -115,6 +114,7 @@ div#product li {
 
 table#prodDisplayBlock {
     margin: 1em 0;
+    @extend .card;
 }
 
 #prodDisplayBlock input[type="text"] {

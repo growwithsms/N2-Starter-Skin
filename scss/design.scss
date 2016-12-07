@@ -5,8 +5,7 @@
 */
 
 @import "font-awesome";
-@import "stacktable";
-
+@import "flickity";
 
 /* 
 ==========================================================================
@@ -61,6 +60,11 @@
 // Shopping Cart and Checkout Pages
 @import "page-cart";
 
+// Downloads page
+@import "page-downloads";
+
+// Line Card Page
+@import "page-line";
 
 /* 
 ==========================================================================
@@ -76,7 +80,9 @@ body > br,
 .mostpopular br,
 #mainbox > br,
 a.fade,
-span.navigation #navigation {
+span.navigation #navigation,
+.n2NewsContainer,
+a#seoForm {
     display: none !important;
 }
 

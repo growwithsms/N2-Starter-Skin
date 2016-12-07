@@ -1,0 +1,19 @@
+/*
+==========================================================================
+    Product Downloads Page
+==========================================================================
+*/
+.page-download .header {
+	margin-top:0;
+	margin-bottom: .75em;
+}
+#downloads > a {
+	margin-top: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 1em;
+    text-decoration: none;
+    h2 {
+    	font-size: 1em;
+    }
+}

@@ -1,1 +1,41 @@
 /* Home page only styles */
+@import "variables";
+.featuredProductsTitle {
+	font-weight: 700;
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-top: 1em;
+}
+.featuredProductsProduct {
+    width: 320px;
+    margin: 0 1em 1em 0;
+}
+.more {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    img {
+	    display: none;
+	}
+}
+
+.line-card-box {
+    display: block;
+    a {
+        display: flex;
+        align-items: center;
+        margin: 1em;
+        width: 100px;
+        height: 70px;
+        img {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 100%;
+        }
+    }
+}

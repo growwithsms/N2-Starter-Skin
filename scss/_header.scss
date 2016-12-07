@@ -4,50 +4,63 @@
 ==========================================================================
 */
 #intro {
-    @extend .page-wrap;
+    background: #262626 !important;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 1em 1em 1em;
+    color: #fff;
+    position: relative;
+    z-index: 99999999;
     a {
         text-decoration: none;
+        color: #fff;
+        display: inline-block;
     }
 }
 
-/* ----------- Logo Area ----------- */
-#pageHeader {
-    h2 { 
-        margin: 0;
-        padding: 0;
-        // Don't display none the H2 for accessability reasons
-    }
-    a {
-        display: block;
-        width: 100%;
-        background: url('img/logo.png');
-        height: 70px;
-        width: 208px;
-        text-indent: -99999px; // this will hide the h2 but still enable screen readers to know the link text
-        overflow: hidden;
-    }
-}
-@media (max-width: 960px) {
-    #pageHeader a {
-        margin: 1em auto;
-    }
-}
 /* ----------- Login / Cart Links ----------- */
-#tinycartstatus {
-    padding: 0.55em;
+#login {
+    order: 0;
+    width: 50%;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #555;
+    font-size: .75em;
+    a {
+        padding: .5em;
+        &:hover,
+        &:focus {
+            background: #555;
+        }
+    }
 }
-#login,
-#tinycart,
-#tinycartstatus {
-    display: inline-block;
+#tinycart {
+    order: 0;
+    width: 50%;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #555;
+    font-size: .75em;
+    text-align: right;
+    a {
+        padding: .5em;
+        &:hover,
+        &:focus {
+            background: #555;
+        }
+    }
+    #tinycartstatus {
+        display: inline-block;
+        padding-right: 0.5em;
+    }
 }
+/* icons */
 #link-cart:before,
 #link-checkout:before,
 #link-login:before,
 #link-support:before,
-#link-newaccount:before {
-    font-family: fontAwesome;
+#link-newaccount:before,
+#link-quick:before {
+    font-family: 'fontAwesome';
     padding-right: 5px;
 }
 #link-cart:before {
@@ -65,56 +78,90 @@
 #link-newaccount:before {
     content: "\f234";
 }
+#link-quick:before {
+    content: "\f0e7";
+}
 
-
-/* ----------- Search - CTA Area */
+/* ----------- Search */
 #search {
+    order: 1;
+    width: 25%;
     position: relative;
-    @extend .clearfix;
+    display: flex;
     #searchkeyword {
         z-index: 1 !important;
-        width: 70%;
-        float: left;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
     }
     #searchsubmit {
-        float: left;
-        width: 30%;
-        margin-top: 0;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        margin: 0;
         &:hover,
-        &:active,
         &:focus {
-
+            
         }
     }
 }
 
+/* ----------- Logo Area ----------- */
+#pageHeader {
+    order: 1;
+    width: 25%;
+    h2 { 
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        display: block;
+        width: 100%;
+        background: url('img/logo.svg') no-repeat center center/contain;
+        width: 100%;
+        text-indent: -99999px;
+        overflow: hidden;
+        padding-bottom: 20%;
+        max-height: 100px;
+        max-width: 419px;
+    }
+}
 
 /* ----------- Main Navigation */
 #navigation {
+    order: 1;
+    width: 50%;
     a {
-        padding: 1em 0.75em 0.7em;
+        padding: 1em 0.75em;
         display: block;
         position: relative;
-        &:hover {
-
+        border-radius: 5px;
+        &:hover,
+        &:focus {
+            background: #555;
         }
     }
-    > ul > li {
-        display: inline-block;
-        position: relative;
-    }
-    > ul ul {
-        position: absolute;
-        left: 0;
-        top: 100%;
-        min-width: 200px;
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
-        z-index: 1;
-    }
-    > ul ul a {
-        padding: 5px 1em;
+    > ul {
+        display: flex;
+        justify-content: center;
+        > li {
+            display: inline-block;
+            position: relative;
+        }
+        /* Second Level Items */
+        ul {
+            @extend .card;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            min-width: 200px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+            z-index: 1;
+            a {
+                padding: 5px 1em;
+                color: #212121;
+                &:hover,
+                &:focus {
+                    background: #eee;
+                }
+            }
+        }
     }
 }
 
@@ -125,6 +172,26 @@
 }
 
 @media (max-width: 960px) {
+    #pageHeader {
+        width: 209.5px;
+        margin-left: 4em;
+        a {
+            margin-top: 1em;
+        }
+    }
+    #login,
+    #tinycart,
+    #navigation,
+    #search {
+        width: 100%;
+        text-align: left;
+        border-bottom: 0 none;
+        margin: 0;
+        background: #f5f5f5;
+    }
+    #tinycart #tinycartstatus {
+        display: none;
+    }
     .menu-toggle {
         display: block;
         position: absolute;
@@ -146,6 +213,7 @@
 
     /* -------- off canvas menu */
     #navigation > ul {
+        display: block;
         position: fixed;
         z-index: 999999999;
         top: 0;
@@ -166,7 +234,9 @@
         transform: translate3d(300px, 0, 0);
         box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.24);
     }
+
     #navigation {
+        color: #222;
         a {
             color: #222;
             padding: 0.75em;
@@ -178,9 +248,11 @@
                 background: #eee;
             }
         }
-        > ul > li,
-        div {
+        > ul > li {
             display: block;
+            ul {
+                display: none !important;
+            }
         }
     }
 }

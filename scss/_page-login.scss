@@ -1,4 +1,36 @@
+/*
+==========================================================================
+    Member Login Page
+==========================================================================
+*/
 
+.page-login h1.page {
+    margin-top: 0;
+}
+
+form.login {
+    @extend .card;
+    padding: 1em;
+    input {
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    p {
+        margin-top: 0;
+        a {
+            font-size: 0.75em;
+            font-style: italic;
+            opacity: 0.8;
+            text-decoration: none;
+        }
+    }
+}
+table.form {
+    padding: 1em;
+    @extend .card;
+    margin-bottom: 1em;
+}
 .tips {
     background: #eee;
     padding: 0.1em 1em 1em 1em;
@@ -47,20 +79,4 @@
     @extend .clearfix;
 }
 
-.login {
-    padding: 1em;
-    border: 1px solid #bbb;
-    margin-bottom: 1em;
-}
-
-.login input {
-    display: block;
-    width: 100%;
-}
-
-.login a {
-    font-size: 0.75em;
-    font-style: italic;
-    opacity: 0.8;
-}
 

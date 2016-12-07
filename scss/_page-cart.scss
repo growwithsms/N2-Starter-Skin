@@ -9,7 +9,9 @@
 #cart a {
     color: #000 !important;
 }
-
+table#cart > tbody > tr:first-child {
+    background: $primary-color;
+}
 
 /* -------------- Checkout page ----------- */
 

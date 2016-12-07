@@ -33,7 +33,8 @@
 			AND	catIndent<#levelsToReturn#
 		ORDER BY catFullSort
 	</cfquery>
-	<ul class="catelog-navigation">
+	<h3><a href="/store/categorylist.cfm" id="categoryNavHeaderLink">Browse Catalog</a></h3>
+	<ul class="accordion-menu">
 		<cfoutput query="catInfo">
 				
 			<!--- Sets the correct link depending on if it's a product page, static page or category page --->
@@ -59,13 +60,13 @@
 			</cfif>
 
 			<!--- Second Level 
-				Stefen's TODO: move second level inside of <li> in first level rather than using javascript to do this.  My Coldfusion Skills are lacking...
+				Stefen's TODO: move second level inside of <li> in first level rather than using javascript to do this.  My Coldfusion Skills are lacking... --->
 			
 			<cfif catIdTop NOT EQUAL catId>
 				<li class="menu-item-depth-2 #catIdParent#" data-parent="#catIdParent#">
 					<a id="nav_#catInfo.catID#" href="#newCatLink#"><cfset t.dt("#catInfo.catName#","all")></a>
 				</li>
-			</cfif>--->
+			</cfif>
 
 		</cfoutput>
 	</ul>
