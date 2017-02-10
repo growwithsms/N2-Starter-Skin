@@ -103,6 +103,12 @@ body:not(.page-search_quick) #product > ul,
     align-items: stretch;
     justify-content: space-between;
     width: 100%;
+    &:after {
+        content: "";
+        flex: auto;
+        width: 23.5%;
+        flex-grow: 0;
+    }
 }
 
 #category > ul > li {
@@ -111,13 +117,7 @@ body:not(.page-search_quick) #product > ul,
         margin-bottom: 0;
     }
 }
-#category>ul:after, #product>ul:after {
-    content: "";
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 49%;
-}
+
 #category > ul > li,
 body:not(.page-search_quick) #product > ul > li,
 .page-search_quick #product > ul {

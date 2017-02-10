@@ -38,6 +38,21 @@ sub {
     bottom: -0.25em;
 }
 
+blockquote {
+    padding: .75em 1.25em;
+    margin: 0 0 1.25em;
+    font-size: 1.25em;
+    border-left: 5px solid #eee;
+    display: block;
+    small {
+        display: block;
+        font-size: 80%;
+        line-height: 1.42857143;
+        color: #777;
+        margin-top: 1em;
+        text-align: right;
+    }
+}
 
 /* Headings */
 
