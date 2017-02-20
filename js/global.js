@@ -86,7 +86,7 @@ $(function() { // on document ready do all the things
     //////// Responsive Tables and Embeds
     ////////////////////////////////////////
 
-    $('table#prodDisplayBlock').wrap('<div class="responsive-table" />')
+    $('table#prodDisplayBlock').wrap('<div class="responsive-table" />');
     $('table#cart').wrap('<div class="responsive-table" />');
 
     $('#mainbox').fitVids();
