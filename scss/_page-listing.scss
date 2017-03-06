@@ -96,8 +96,9 @@ div#checkoutRush {
 }
 /* Grids */
 #category > ul,
-body:not(.page-search_quick) #product > ul,
-.page-search_quick #product {
+body:not(.page-search_quick):not(.page-favorites) #product > ul,
+.page-search_quick #product,
+.page-favorites #product {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
@@ -119,8 +120,9 @@ body:not(.page-search_quick) #product > ul,
 }
 
 #category > ul > li,
-body:not(.page-search_quick) #product > ul > li,
-.page-search_quick #product > ul {
+body:not(.page-search_quick):not(.page-favorites) #product > ul > li,
+.page-search_quick #product > ul,
+.page-favorites #product > ul {
     text-align: center;
     position: relative;
     padding: 0.5em;
@@ -134,34 +136,39 @@ body:not(.page-search_quick) #product > ul > li,
 
 @media (max-width: 1024px) {
     #category > ul > li,
-    body:not(.page-search_quick) #product > ul > li,
-    .page-search_quick #product > ul {
+    body:not(.page-search_quick):not(.page-favorites) #product > ul > li,
+    .page-search_quick #product > ul,
+    .page-favorites #product > ul {
         width: 31.33%;
     }
 }
 
 @media (max-width: 767px) and (min-width: 401px) {
     #category > ul > li,
-    body:not(.page-search_quick) #product > ul > li,
-    .page-search_quick #product > ul {
+    body:not(.page-search_quick):not(.page-favorites) #product > ul > li,
+    .page-search_quick #product > ul,
+    .page-favorites #product > ul {
         width: 48.5%;
     }
 }
 
 @media (max-width: 400px) {
     #category > ul > li,
-    body:not(.page-search_quick) #product > ul > li,
-    .page-search_quick #product > ul {
+    body:not(.page-search_quick):not(.page-favorites) #product > ul > li,
+    .page-search_quick #product > ul,
+    .page-favorites #product > ul {
         width: 100%;
     }
 }
 
-body:not(.page-search_quick) #product>ul>li:hover,
-body:not(.page-search_quick) #product>ul>li:focus,
+body:not(.page-search_quick):not(.page-favorites) #product>ul>li:hover,
+body:not(.page-search_quick):not(.page-favorites) #product>ul>li:focus,
 #category>ul>li:focus,
 #category>ul>li:hover,
 .page-search_quick #product > ul:hover,
-.page-search_quick #product > ul:focus {
+.page-search_quick #product > ul:focus,
+.page-favorites #product > ul:hover,
+.page-favorites #product > ul:focus {
 
 }
 
