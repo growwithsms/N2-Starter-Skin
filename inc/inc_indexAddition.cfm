@@ -23,7 +23,7 @@
 				<cfimage source="#request.offServerStorage#mfg\thumbs\#mfgs.mfgLogo#" action="info" structname="imgInfo">  
 				<cfset newTopMargin = (66- imgInfo.height) / 2>
 				<cfif mfgs.mfgID neq 593>
-					<a id="lc#mfgs.mfgID#" href="#request.linkto#store/search_results.cfm?searchKeyword=#URLEncodedFormat(mfgs.mfgName)#&mOnly=1"><img src="#request.linkto#files/mfg/thumbs/#URLEncodedFormat(mfgs.mfgLogo)#" alt="#mfgs.mfgLogo#"></a>
+					<a id="lc#mfgs.mfgID#" href="#request.linkto#store/search_results.cfm?searchKeyword=#URLEncodedFormat(mfgs.mfgName)#&mOnly=1"><img data-flickity-lazyload="#request.linkto#files/mfg/thumbs/#URLEncodedFormat(mfgs.mfgLogo)#" alt="#mfgs.mfgLogo#"></a>
 				</cfif>
 			</cfif>
 		</cfoutput>

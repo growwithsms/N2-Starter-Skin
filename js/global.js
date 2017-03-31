@@ -108,7 +108,8 @@ $(function() { // on document ready do all the things
         pageDots: false,
         autoPlay: true,
         prevNextButtons: false,
-        imagesLoaded: true
+        imagesLoaded: true,
+        lazyLoad: 12
     });
     
     $('#productFlag').flickity({
