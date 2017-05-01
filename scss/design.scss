@@ -4,8 +4,8 @@
 ==========================================================================
 */
 
-@import "font-awesome";
-@import "flickity";
+@import "vendor/font-awesome";
+@import "vendor/flickity";
 
 /* 
 ==========================================================================
@@ -14,28 +14,28 @@
 */
 
 // a responsive foundation
-@import "base";
+@import "partials/base";
 
 // The Colors and Fonts used throughout our project
-@import "variables";
+@import "partials/variables";
 
 // Typography - header sizes, line heights, etc.
-@import "typography";
+@import "partials/typography";
 
 // Form styles - inputs, textareas, select, etc.
-@import "forms";
+@import "partials/forms";
 
 // Button styles - submit inputs, links, and button buttons
-@import "buttons";
+@import "partials/buttons";
 
 // The Header and everything inside of it including navigation
-@import "header";
+@import "partials/header";
 
 // The Body's generic elements. for page specific elements go to page-name.scss files
-@import "body";
+@import "partials/body";
 
 // The Footer and everything inside of it
-@import "footer";
+@import "partials/footer";
 
 
 
@@ -46,28 +46,28 @@
 */
 
 // Product and Category Listing Pages
-@import "page-listing";
+@import "partials/page-listing";
 
 // Product Pages
-@import "page-product";
+@import "partials/page-product";
 
 // Login Page
-@import "page-login";
+@import "partials/page-login";
 
 // Account Pages
-@import "page-account";
+@import "partials/page-account";
 
 // Shopping Cart and Checkout Pages
-@import "page-cart";
+@import "partials/page-cart";
 
 // Downloads page
-@import "page-downloads";
+@import "partials/page-downloads";
 
 // Line Card Page
-@import "page-line";
+@import "partials/page-line";
 
 // News Page
-@import "page-news";
+@import "partials/page-news";
 
 /* 
 ==========================================================================
