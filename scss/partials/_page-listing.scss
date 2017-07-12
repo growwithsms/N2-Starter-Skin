@@ -241,3 +241,59 @@ body>div:last-child>div:nth-child(3) {
 .page-search_quick h1 {
     clear: both;
 }
+
+
+/* Advanced Search */
+.advanced-search-wrapper {
+    display: flex;
+}
+
+.search-filters {
+    flex: 1;
+    font-size: .9em;
+}
+
+.search-results {
+    flex: 3;
+}
+
+.search-filters {
+    max-width: 220px;
+}
+
+.search-filters fieldset {
+    margin-bottom: 1em;
+}
+
+.search-filters label {
+    display: block;
+    margin-right: 1rem;
+    margin-left: 1.5rem;
+    text-indent: -1.6rem;
+}
+
+
+/* Button: use before pseudo selector so I have control to change it in the skin*/
+
+.search-filters button:before {
+    content: "\f078";
+    display: inline-block;
+    margin-right: .5rem;
+    font-family: "FontAwesome";
+    transition: all 300ms ease;
+    transform: rotate(0deg);
+}
+
+.search-filters .collapsed button:before {
+    transform: rotate(-180deg);
+}
+
+
+/* closing/expanding the fieldset */
+.search-filters .collapsible {
+    display: block;
+}
+
+.search-filters .collapsed .collapsible {
+    display: none;
+}
