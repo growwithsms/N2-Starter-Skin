@@ -18,18 +18,6 @@ $(function() { // on document ready do all the things
     $('#productFlagTitle').insertBefore('#productFlag');
     $('#searchkeyword').attr('placeholder', 'Search for a product...');
 
-    // Move an element Down function
-    $.fn.moveDown = function() {
-        $.each(this, function() {
-            $(this).before($(this).next());
-        });
-    };
-
-
-
-    // Moves the Category name below picture in DOM
-    $('#category > ul > li > h3').moveDown();
-
     
     ////////////////////////////////////////
     //////// Mobile Menu
