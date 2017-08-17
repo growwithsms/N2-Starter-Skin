@@ -125,3 +125,13 @@ table#prodDisplayBlock {
 form#shopAddForm {
     z-index: 1;
 }
+
+.pRecentlyViewed:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.pRecentlyViewed div {
+    height: auto !important;
+    font-size: .75rem
+}
