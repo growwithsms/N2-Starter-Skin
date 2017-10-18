@@ -12,7 +12,9 @@ The purpose of this skin is to allow for easy, responsive theme development on t
 # Getting Started Guide
 
 ## Editing Styles
-All of your project styles should be added to the appropriate SASS file in the `/SCSS/` folder. Use your favorite CSS preprocessor client (such as prepros, koala, codekit, etc..) to output the design.scss file to design.css. Your design.css file should be minified and autoprefixed.
+All of your project styles should be added to the appropriate SASS file in the `/scss/` folder. Use your favorite CSS preprocessor client (such as prepros, koala, codekit, etc..) to output the `/scss/design.scss` file to `/design.css`
+
+Your design.css file should be minified and autoprefixed.
 
 ## Editing Templates/HTML
 All of the available template files can be found in the `/inc/` folder. If you cannot make the edits you need you will need to use JavaScript to edit the DOM. See "N2 Hacks" in `/js/global.js` ¯\_(ツ)_/¯
