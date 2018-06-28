@@ -4,7 +4,7 @@ The purpose of this skin is to allow for easy, responsive theme development on t
 ## Starter Skin Features
 + Completely Responsive (Forms, Product Grids, Tables, Etc..)
 + Mobile "Off-Canvas" Navigation
-+ FontAwesome icons built-in
++ Common ecommerce icons built-in
 + Built with SASS for faster development
 
 [View Live Preview](http://realizen2.mycartssl.com/store/index.cfm)

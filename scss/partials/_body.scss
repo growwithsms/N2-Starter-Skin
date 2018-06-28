@@ -40,12 +40,6 @@
         display: block;
         margin: 0;
         text-decoration: none;
-        &:before {
-            content: "\f00a";
-            font-family: 'FontAwesome';
-            padding-right: 5px;
-            font-weight: 400;
-        }
         &:hover {
             background: #eee;
         }
@@ -68,7 +62,7 @@
     .menu-item-depth-1 > a.has-children {
         &:after {
             content: "\f078";
-            font-family: fontAwesome;
+            font-family: 'n2-ecommerce';
             float: right;
             transform: rotate(0deg);
             transition: all 300ms ease;

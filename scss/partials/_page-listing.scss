@@ -218,7 +218,7 @@ body>div:last-child>div:nth-child(3) {
 }
 #waitAnim:before {
     content: "\f110";
-    font-family: fontAwesome;
+    font-family: 'n2-ecommerce';
     display: block;
     font-size: 3em;
 }
@@ -280,7 +280,7 @@ body>div:last-child>div:nth-child(3) {
     content: "\f078";
     display: inline-block;
     margin-right: .5rem;
-    font-family: "FontAwesome";
+    font-family: "n2-ecommerce";
     transition: all 300ms ease;
     transform: rotate(0deg);
 }
