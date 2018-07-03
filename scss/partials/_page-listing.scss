@@ -50,6 +50,10 @@
 #productFlag {
     @extend .card;
 }
+div#productFlag .flickity-slider > div {
+    padding-bottom: .25rem !important;
+    height: auto !important;
+}
 #category h3,
 #product h3 {
     height: auto !important;
